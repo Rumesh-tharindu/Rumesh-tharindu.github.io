@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script src="https://use.fontawesome.com/7cdbaf2a11.js"></script>
+
+</head>
+<body>
+    
+    <div class="row">
+        <div class="box-1 col-md-4">
+          <div class="logo">
+            <div><span>N</span></div>
+            <div><span>E</span></div>
+            <div><span>M</span></div>
+          </div>
+         
+          <a href="#ex1" rel="modal:open" class="main-button">Get Started</a>
+    </div>
+    <div class="col-md-8">
+    <div id="ex1" class="modal">
+      <h1>LOGIN</h1>
+      <div class="wrapper">
+      <div class="form-group">
+        <label for="">username</label>
+        <input type="text" placeholder="Enter username" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">password</label>
+        <input type="password" placeholder="Enter password" class="form-control">
+      </div>
+
+      <a href="home.html" id="login-btn" class="form-control"> <i class="fa fa-sign-in"></i> Login</a>
+    </div>
+    </div>
+    
+    
+
+       <div class="header">
+           <h1 style="color:#fff; font-size:100px; font-family: sans-serif;margin-left: 80px; margin-top: 80px;  letter-spacing: 50px;
+           font-weight: bold;">DMS</h1>
+           
+       </div>
+       <div class="text">
+         DIESEL MANAGMENT SYSTEM<span></span>
+       </div>
+      
+    </div>
+    <p style="color:#fff;position:absolute;
+    top:300px;left:400px; text-transform:uppercase;
+    font-weight: 500; font-size: 20px;">Powerd by NEM-ERP Engineering & Research Unit</p>
+</div>
+    
+
+    
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<script>
+  $('document').ready(function(){
+    $('.modal').css({
+     'overflow':'visible',
+     'top':'-50px',
+      'padding-bottom':'40px'
+   })
+  })
+  
+</script>
+
+</body>
+</html>

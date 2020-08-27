@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DIMS NEM Construction</title>
+    
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rtdropdown.css">
+    
+    <script src="https://use.fontawesome.com/7cdbaf2a11.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/image/Favicon.jpg">
+
+    <style>
+      .nav-btn{
+
+        display:flex;
+        align-items: center;
+      }
+      .nav-btn a{
+        margin-right: 40px;
+        margin-top: 20px;
+        color:#000;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+  <div class="row">
+      <div class="col-md-2">
+          <div class="logo">
+              <img src="assets/image/logo.png" alt="">
+          </div>
+          <div class="sidenav">
+                <div class="box">
+                  <a  href="home.html"><img src="assets/image/Home-icon.png" width=30px height="30px" style="margin-right:10px;" alt=""></i>Home</a>
+                  <a href="project.html"><img src="assets/image/project.png" width="25px" height="25px;" style="margin-right: 10px;">Projects</a>
+                  <a  href="user.html"><img src="assets/image/user.jpg" width="30px" height="30px;" style="margin-right:10px;" alt="">User Master </a> 
+                         <a href="resourses.html"><img src="assets/image/resourses.png" width=25px height="25px" style="margin-right:5px;" alt="">Resourses </a>
+                         <a href="supplier.html"><img src="assets/image/supplier.png" width=25px height="25px" style="margin-right:5px;" alt="">Supplier</a>
+                         
+                         
+                             <a  href="vehicle.html"><img src="assets/image/vehicle.jpg" width="30px" height="30px;" style="margin-right: 5px;">Vehicle</a>
+                             <a  href="user.html"><img src="assets/image/employee.png" width="20px" height="25px"; style="margin-right: 5px;">
+                               Employee</a>
+                               <a  href="transaction.html"><img src="assets/image/transaction.png" width="30px" height="30px"; style="margin-right: 5px;">
+                                 Transaction</a>    
+               <a   href="#contact"> <img src="assets/image/qrimage.png" alt="" width="20px" height="25px"; style="margin-right: 5px;"> QR configaration</a>
+              
+               <a href="report.html"><img src="assets/image/report.jpg" width="25px" height="25px;" style="margin-right: 10px;">Report</a>
+                   
+                  </div> 
+                </div>
+          </div>
+     
+      <div class="col-md-10">
+          <header>
+              <div class="col-md-8 nav-btn">
+                <a href="T-tank.html"><img width="30px" height="30px"src="/assets/image/data.jpg" alt=""></br><span>Data</span></a>
+                <a href="#"><img width="30px" height="30px"src="/assets/image/RT data.png"alt=""></br><span  style="border-bottom: 3px solid blue;">RT Data</span></a>
+              </div>
+              <div class="col-md-4">
+                 <div class="loging">
+                   <button id="logingButton"><i class="fa fa-power-off"></i></a></button>
+                   <span>Logout</span>
+                 </div>
+                
+                </div>
+          </header>
+         <h1 style="text-align: center; text-transform: uppercase;">Real Time data</h1>
+         <div class="row">
+         <div class="container2">
+          <div class="dropdown2">
+              <div class="select">
+                  <span id="show-date2">Project code</span>
+                  <i class="fa fa-chevron-down"></i>
+              </div>
+              <ul class="dropdown2-menu">
+                  <li>CEP-2/PK-C</li>
+                  <li>WEMEDILLA</li>
+                  <li>BEL-GEN</li>
+                  <li>IROAD_BA_1</li>
+                  <li>BOP-GEN</li>
+                  <li>MAH-GEN</li>
+                  <li>WS-SPR-EKA</li>
+              </ul>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="wrapper">
+      <div class="col-md-4 tank">
+        <div class="circle">
+          <div class="box"></div>
+        </div>
+      
+      </div>
+      <div class="col-md-8 tank-details">
+        <p>Tank NO : 01</p>
+        <p>Capacity :13200 L</p>
+        <p>RT Volume : <span id="count1"></span></p>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="wrapper">
+      <div class="col-md-4 tank2">
+        <div class="circle">
+          <div class="box"></div>
+        </div>
+      
+      </div>
+      <div class="col-md-8 tank-details2">
+        <p>Tank NO : 02</p>
+        <p>Capacity :6000 L</p>
+        <p>RT Volume : <span id="count2"></span></p>
+      </div>
+    </div>
+    </div>
+         
+                      
+                 
+              
+             
+      </div>
+  </div>
+</div>
+<div style="height:24px; background:#337ab7; color:#fff;">
+  <style>
+  .footer-left span{
+  margin-right: 30px;
+  }
+  </style>
+  <div class="footer-left">
+    <span>NEM Constructions (Pvt) Ltd</span>
+    <span>Rumesh Amarasinghe</span>
+    <span>  08/09/20</span>
+    <span style="margin-left:100px;">Powered by NEM-ERP Engineering & Research Unit</span>
+  </div>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#logingButton').click(function(){
+      $('.logoutbox').toggle()
+    })
+
+
+  var loc =window.location.pathname;
+  loc=loc.replace('/','')
+  console.log(loc)
+
+   $('.sidenav .box').find('a').each(function() {
+    $(this).toggleClass('active', $(this).attr('href') == loc);
+  });
+   $('.dropdown1').on('click',function(){
+     $('.dropdown1').attr('tabindex',1).focus();
+     $(this).toggleClass('active')
+     $('.dropdown1 .dropdown1-menu').slideToggle(500)
+   })
+   $('.dropdown1-menu li').click(function(){
+    $('#show-date').html($(this).html())
+   })
+   $('.dropdown1').focusout(function(){
+     $('.dropdown1 .dropdown1-menu').slideUp(500)
+   })
+   $('.dropdown2').on('click',function(){
+     $('.dropdown2').attr('tabindex',2).focus();
+     $(this).toggleClass('active')
+     $('.dropdown2 .dropdown2-menu').slideToggle(500)
+   })
+   $('.dropdown2-menu li').click(function(){
+    $('#show-date2').html($(this).html())
+   })
+   $('.dropdown3').focusout(function(){
+     $('.dropdown2 .dropdown2-menu').slideUp(500)
+   })
+   $('.dropdown3').on('click',function(){
+     $('.dropdown3').attr('tabindex',3).focus();
+     $(this).toggleClass('active')
+     $('.dropdown3 .dropdown3-menu').slideToggle(500)
+   })
+   $('.dropdown3-menu li').click(function(){
+    $('#show-date3').html($(this).html())
+   })
+   $('.dropdown3').focusout(function(){
+     $('.dropdown3 .dropdown3-menu').slideUp(500)
+   })
+
+   var count1=$('#count1')
+   var number =0
+   var myvar=setInterval(function(){
+    
+    number=number+Math.round(Math.random())*124
+    if(number<6000){
+
+      count1.html(number)
+      
+    }
+    else{
+      clearInterval(myvar)
+      var i=0
+      setInterval(function(){
+           i++
+           if(i%2==0){
+            number=number+10
+            count1.html(number)
+           }
+           else{
+            number=number-10
+            count1.html(number)
+           }
+        
+        
+      },500)
+      
+    }
+
+    
+    
+    
+   
+   },70)
+   var count2=$('#count2')
+   var number2 =0
+   var myvar2=setInterval(function(){
+    
+    number2=number2+Math.round(Math.random())*124
+    if(number2<3000){
+
+      count2.html(number2)
+      
+    }
+    else{
+      clearInterval(myvar2)
+      var i2=0
+      setInterval(function(){
+           i2++
+           if(i2%2==0){
+            number2=number2+12
+            count2.html(number2)
+           }
+           else{
+            number=number-12
+            count2.html(number2)
+           }
+        
+        
+      },500)
+      
+    }
+
+    
+    
+    
+   
+   },70)
+ 
+});
+
+    
+    
+</script>
+ 
+
+</body>
+</html>

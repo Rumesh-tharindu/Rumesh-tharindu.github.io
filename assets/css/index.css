@@ -1,0 +1,211 @@
+body{
+    margin:0;
+
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("/assets/image/background.png");
+    width:100%;
+    background-size: cover;
+    height: 40vh;
+    background-repeat: none;
+    
+    
+    
+}
+
+
+
+.row{
+   width:100%;
+   height: 100%;
+   z-index: 1;
+  
+   
+ 
+   
+   
+}
+.box-1 a{
+ background-image: linear-gradient(180deg,#fff,#f8f9fc);
+ padding: 10px 40px;
+ opacity: 1;
+ border-radius: 3px;
+ position: relative;
+ top:500px;
+ left: 200px;
+ color:#555;
+ font-size: 16px;
+ text-transform: uppercase;
+ font-weight: bold;
+ opacity: 1;
+ border:none;
+ letter-spacing: 2px;
+ position: fixed;
+ box-shadow: inset 2px 2px #f2f2f2;
+}
+.model-content{
+    width:200px;
+}
+.model-header{
+ border:none;
+}
+.box-2 .col-md-8 .modal-body input[type="text"]{
+    
+    border: none;
+}
+.modal h1{
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: bold;
+    
+}
+.modal label{
+    display: block;
+    text-transform: uppercase;
+}
+.modal input{
+    border:none;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    
+   
+    
+}
+.modal input::before{
+    content: "HI";
+    color:#000;
+}
+.modal #login-btn{
+    text-align: center;
+    background-image: linear-gradient(to top,#1e5799 30%,#009ffd );
+    padding: 8px 70px;
+    color:#fff;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    border-radius: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    
+}
+.modal .wrapper{
+    width: 100%;
+}
+.box-password{
+    margin-bottom: 30px;
+}
+
+.modal i{
+    margin-right: 10px;
+}
+.text{
+    position:relative;
+  float:left;
+  font-size:30px;
+  color:#000;
+  background-color: #fff;
+  padding:20px ;
+  margin-left: 15px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.text >span{
+    position: absolute;
+    top: 20px;
+    right:0;
+    height: 50%;
+    background-color: #fff;
+     border-left: 3px solid #000;
+    animation: Fwrite 10s steps(38, start) infinite, cursor 0.5s step-end infinite;
+}
+@keyframes Fwrite {
+    0% {
+      width: 100%;
+    }
+    70%, 100% {
+      width: 5%;
+    }
+  }
+  @keyframes cursor {
+    0% {
+      border-left-color: transparent;
+    }
+    50% {
+      border-left-color: #000;
+    }
+    100% {
+      border-left-color: transparent;
+    }
+  }
+  .logo{
+      margin-left:20px;
+  }
+  .logo div{
+      background-color: #000;
+      color:yellow;
+      height: 110px;
+      width:60px;
+      display: inline-block;
+     font-size: 40px;
+     font-weight: bold;
+     animation: myanimation 2s ease-in-out;
+  }
+  .logo div span{
+      position: relative;
+      top:50px;
+      left: 15px;
+      animation: myanimation 10s ease;
+  }
+  @keyframes myanimation{
+      0%{
+          height: 0;
+          opacity: 0;
+          
+      }
+      100%{
+          height: 90px;
+         
+      }
+  }
+  
+  
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+  
+  .main-button {
+      background-color: #f8f9fc;
+      border: 0;
+      padding: 10px 35px;
+      font-size: 20px;
+      font-family: 'Open Sans';
+      border-radius: 3px;
+      cursor: pointer;
+      color: #222f3e;
+      position: relative;
+      text-transform: uppercase;
+ }
+  .main-button:after {
+      background-color: #fff;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 3px;
+      animation-name: blink;
+      animation-duration: 1.3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+ }
+  @keyframes blink {
+      0% {
+          transform: scale3d(1, 1, 1);
+          opacity: 0.8;
+     }
+      100% {
+          transform: scale3d(1.3, 1.4, 1.3);
+          opacity: 0;
+     }
+ }
+  

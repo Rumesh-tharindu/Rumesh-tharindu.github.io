@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DIMS NEM Construction</title>
+    
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/report.css">
+    <link rel="stylesheet" href="assets/jquery-custom-scrollbar/jquery.custom-scrollbar.css">
+    <script src="https://use.fontawesome.com/7cdbaf2a11.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/image/Favicon.jpg">
+
+    
+</head>
+<body>
+  <div class="row" style="margin-bottom: 15px;">
+      <div class="col-md-2">
+          <div class="logo">
+              <img src="assets/image/logo.png" alt="">
+          </div>
+          <div class="sidenav">
+                <div class="box">
+                        <a  href="home.html"><img src="assets/image/Home-icon.png" width=30px height="30px" style="margin-right:10px;" alt=""></i>Home</a>
+                        <a href="project.html"><img src="assets/image/project.png" width="25px" height="25px;" style="margin-right: 10px;">Projects</a>
+                     <a  href="user.html"><img src="assets/image/user.jpg" width="30px" height="30px;" style="margin-right:10px;" alt="">User Master </a> 
+                            <a href="resourses.html"><img src="assets/image/resourses.png" width=25px height="25px" style="margin-right:5px;" alt="">Resources </a>
+                            <a href="supplier.html"><img src="assets/image/supplier.png" width=25px height="25px" style="margin-right:5px;" alt="">Supplier</a>
+                            
+                            
+                                <a  href="vehicle.html"><img src="assets/image/vehicle.jpg" width="30px" height="30px;" style="margin-right: 5px;">Vehicle</a>
+                                <a  href="user.html"><img src="assets/image/employee.png" width="20px" height="25px"; style="margin-right: 5px;">
+                                  Employee</a>
+                                  <a  href="transaction.html"><img src="assets/image/transaction.png" width="30px" height="30px"; style="margin-right: 5px;">
+                                    Transaction</a>    
+                  <a   href="Qrgenarator.html"> <img src="assets/image/qrimage.png" alt="" width="20px" height="25px"; style="margin-right: 5px;"> QR configaration</a>
+                  <a href="report.html"><img src="assets/image/report.jpg" width="25px" height="25px;" style="margin-right: 10px;">Report</a>
+                  </div> 
+                </div>
+          </div>
+     
+      <div class="col-md-10">
+          <header>
+              <div class="col-md-8">
+                  
+              </div>
+              <div class="col-md-4">
+                 <div class="loging">
+                   <button id="logingButton"><i class="fa fa-power-off"></i></a></button>
+                   <span>Logout</span>
+                 </div>
+                
+                </div>
+          </header>
+          <div class="col-md-8">
+            <div class="date">
+                <input type="date" name="" id="date" class="date0" > <label for="date" class="costem-date"><i class="fa fa-calendar"></i><span id="real-date" >2019-11-4</span>  <i class="fa fa-caret-down"></i></label>
+                <input type="date" name="" id="date1" class="date01"><label for="date1" class="costem-date1"><i class="fa fa-calendar"></i><span id="real-date1" ></span> <i class="fa fa-caret-down"></i></label>
+            </div>
+            <div class="contents1">
+              <div class="bar">
+                <button id="details" class="bar-item active01"><span class="glyphicon glyphicon-list-alt"></span>Vehicle Details</button>
+                <button id="data" class="bar-item"><i class="fa fa-table"></i>vehicle data</button>
+                <button id="overview1" class="bar-item"><span class="glyphicon glyphicon-stats"></span> Vehicle Overview</button>
+              </div>
+              <div class="details content">
+                <div class="image">
+                  <img style="object-fit:contain;" src="assets/image/van.jpg" alt="">
+                </div>
+                <div class="v-details">
+                  <p>Vehicle No :LN-7263</p>
+                  <p>Vehicle Type : Dump Truck</p>
+                  <p>Type :Internal</p>
+                  <p>UOM  :KM</p>
+                  <p>Rate :9.8</p>
+                  <p>Register Location :CEP_2</p>
+                  <p>Current Location :Wemedilla</p>
+                  
+                </div>
+              </div>
+              <div class="data content">
+                <table class="table table-bordered table-dark" style="margin-top:20px">
+                  
+                    <tr style="background-color:#e2e2e2;">
+                      <th scope="col">Date</th>
+                      <th scope="col">Time</th>
+                      <th scope="col">Meter Reading</th>
+                      <th scope="col">Quentity</th>
+                      <th scope="col">Issued To</th>
+                      <th scope="col">Issued By</th>
+                    </tr>
+                 
+                  <tbody>
+                      <tr>
+                          <th scope="row">07:12:2019</th>
+                          <td>4:45:09</td>
+                          <td>31452</td>
+                          <td>120L</td>
+                          <td>M. Sarath </td>
+                          <td>J .Gomesh</td>
+                        </tr>
+                    <tr>
+                      <th scope="row">09:12:2019</th>
+                      <td>1:05:08</td>
+                      <td>31500</td>
+                      <td>70L</td>
+                      <td>M. Sarath </td>
+                      <td>N .kuranrathna</td>
+                    </tr>
+                    
+                    <tr>
+                      <th scope="row">10:12:2019</th>
+                      <td>9:40:09</td>
+                      <td>31560</td>
+                      <td>100L</td>
+                      <td>M. Sarath </td>
+                      <td>J .Gomesh</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">12:12:2019</th>
+                      <td>5:22:00</td>
+                      <td>31630</td>
+                      <td>90L</td>
+                      <td>M. Sarath </td>
+                      <td>J .Kuranrathna</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">13:12:2019</th>
+                      <td>4:45:09</td>
+                      <td>31720</td>
+                      <td>50L</td>
+                      <td>L.J Sunil </td>
+                      <td>J .Gomesh</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">14:12:2019</th>
+                      <td>10:45:09</td>
+                      <td>31800</td>
+                      <td>73L</td>
+                      <td>M. Sarath </td>
+                      <td>J .Gomesh</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">18:12:2019</th>
+                      <td>7:58:49</td>
+                      <td>31876</td>
+                      <td>86L</td>
+                      <td>M. Sarath </td>
+                      <td>J .Gomesh</td>
+                    </tr>
+                    
+                    
+                  </tbody>
+                </table>
+                <div class="info">
+                  <div class="total">
+                    <p>TOTAL-QUENTITY :1398L</p>
+                  </div>
+                  <div class="total">
+                    <p>TOTAL-DISTANCE :22009KM</p>
+                  </div>
+                  <div class="total">
+                    <p>TOTAL-COST :Rs 10290</p>
+                  </div>
+                </div>
+              </div>
+              
+           
+            
+              <div class="overview1 content">
+                <div id="chartContainer" style="height: 300px; width: 100%;margin-top: 30px;"></div>
+              </div>
+            </div>
+            
+          </div>
+         <div class="col-md-4">
+            <div class="search-box">
+                 <div class="search-head">
+                   <span class="heading"><i class="fa fa-car"></i>Choose vehicle</span>
+                 </div>
+                 <div class="search-box-parent">
+                   <div class="search-box-child">
+                <div class="search-bar">
+                  <input type="text" name="" id="" placeholder="search">
+                </div>
+                <ul class="search-scroll modern-skin">
+
+                  <li>LC-4667 TRUCK-ISUZU</li>
+                  <li>LH-9786 WATER-BOWSER</li>
+                  <li>LI-1569 LORRY-4W</li>
+                  <li>LH-8082 DRUM-TRUCK</li>
+                  <li>251-4249 VAN</li>
+                  <li>257-8186 CREW-CAB</li>
+                  <li class="active">LN-7263</li>
+                  <li>LC-4667 TRUCK-ISUZU</li>
+                  <li>LH-9786 WATER-BOWSER</li>
+                  <li>LI-1569 LORRY-4W</li>
+                  <li>LH-8082 DRUM-TRUCK</li>
+                  <li>251-4249 VAN</li>
+                  <li>257-8186 CREW-CAB</li>
+                  <li>LC-4667 TRUCK-ISUZU</li>
+                  <li>LH-9786 WATER-BOWSER</li>
+                  <li>LI-1569 LORRY-4W</li>
+                  <li>LH-8082 DRUM-TRUCK</li>
+                  <li>251-4249 VAN</li>
+                  <li>257-8186 CREW-CAB</li>
+                  <li>251-4249 VAN</li>
+                  <li>257-8186 CREW-CAB</li>
+                  <li>LC-4667 TRUCK-ISUZU</li>
+                  <li>LH-9786 WATER-BOWSER</li>
+                  <li>LI-1569 LORRY-4W</li>
+                  <li>LH-8082 DRUM-TRUCK</li>
+                  <li>251-4249 VAN</li>
+                  <li>257-8186 CREW-CAB</li>
+                  <li>251-4249 VAN</li>
+                  <li>257-8186 CREW-CAB</li>
+                  <li>LC-4667 TRUCK-ISUZU</li>
+                  <li>LH-9786 WATER-BOWSER</li>
+                  <li>LI-1569 LORRY-4W</li>
+                  <li>LH-8082 DRUM-TRUCK</li>
+                  <li>251-4249 VAN</li>
+                  <li>257-8186 CREW-CAB</li>
+                 
+                </ul>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+<div style="height:24px; background:#337ab7; color:#fff;">
+  <style>
+  .footer-left span{
+  margin-right: 30px;
+  }
+  </style>
+  <div class="footer-left">
+    <span>NEM Constructions (Pvt) Ltd</span>
+    <span>Rumesh Amarasinghe</span>
+    <span>  08/09/20</span>
+    <span style="margin-left:100px;">Powered by NEM-ERP Engineering & Research Unit</span>
+  </div>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/jquery-custom-scrollbar/jquery.custom-scrollbar.js"></script>
+<script src="assets/jquery.canvasjs.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#logingButton').click(function(){
+      $('.logoutbox').toggle()
+    })
+
+
+  var loc =window.location.pathname;
+  loc=loc.replace('/','')
+  console.log(loc)
+
+   $('.sidenav .box').find('a').each(function() {
+    $(this).toggleClass('active', $(this).attr('href') == loc);
+  });
+  $('.search-scroll').customScrollbar()
+  $(".thumb").css('height','60px')
+  $('.scrollable.modern-skin').css('padding',"0 20px 0 0")
+  
+    $('#data').on('click',function(){
+    $('.date').fadeIn('1000', function() {
+     $(this).css('visibility','visible');
+  })
+    })
+   $('#details').click(function(){
+    $('.date').css('visibility','hidden');
+   })
+   
+   $('#overview1').on('click',function(){
+    $('.date').fadeIn('1000', function() {
+     $(this).css('visibility','visible');
+  })
+  })
+
+  var options = {
+	exportEnabled: true,
+	animationEnabled: true,
+
+
+	axisX: {
+		title: "Disel Consumption"
+	},
+	axisY: {
+		title: "Consumption",
+		titleFontColor: "#4F81BC",
+		lineColor: "#4F81BC",
+		labelFontColor: "#4F81BC",
+		tickColor: "#4F81BC",
+		includeZero: false
+	},
+	
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		itemclick: toggleDataSeries
+	},
+	data: [{
+		type: "spline",
+		name: "Actual",
+		showInLegend: true,
+		xValueFormatString: "MMM YYYY",
+		dataPoints: [
+			{ x: new Date(2019, 0, 1),  y: 12 },
+			{ x: new Date(2019, 1, 1), y: 13 },
+			{ x: new Date(2019, 2, 1), y: 14 },
+			{ x: new Date(2019, 3, 1),  y: 10 },
+			{ x: new Date(2019, 4, 1),  y: 9 },
+			{ x: new Date(2019, 5, 1),  y: 12 },
+			{ x: new Date(2019, 6, 1), y: 14 },
+			{ x: new Date(2019, 7, 1), y: 15 },
+			{ x: new Date(2019, 8, 1),  y: 12 },
+			{ x: new Date(2019, 9, 1),  y: 10 },
+			{ x: new Date(2019, 10, 1),  y: 13 },
+			{ x: new Date(2019, 11, 1), y: 14 }
+		]
+	},
+	{
+		type: "spline",
+		name: "standard",
+		showInLegend: true,
+		xValueFormatString: "MMM YYYY",
+		dataPoints: [
+			{ x: new Date(2019, 0, 1),y:9   },
+			{ x: new Date(2019, 1, 1),y:9 },
+			{ x: new Date(2019, 2, 1),y:9  },
+			{ x: new Date(2019, 3, 1),y:9 },
+			{ x: new Date(2019, 4, 1),y:9  },
+			{ x: new Date(2019, 5, 1),y:9  },
+			{ x: new Date(2019, 6, 1),y:9 },
+			{ x: new Date(2019, 7, 1),y:9 },
+			{ x: new Date(2019, 8, 1),y:9},
+			{ x: new Date(2019, 9, 1),y:9 },
+			{ x: new Date(2019, 10, 1),y:9 },
+			{ x: new Date(2019, 11, 1), y:9}
+		]
+	}]
+};
+$("#chartContainer").CanvasJSChart(options);
+
+function toggleDataSeries(e) {
+	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else {
+		e.dataSeries.visible = true;
+	}
+	e.chart.render();
+}
+
+}
+  
+  
+   ) 
+    
+</script>
+<script>
+  
+  // content box
+  var button1=document.getElementById('details')
+  var button2=document.getElementById('data')
+  var button3=document.getElementById('overview1')
+  var content=document.getElementsByClassName('content')
+  var buttons=[button1,button2,button3]
+  button1.addEventListener('click',function(){
+     for(var i=0;i<content.length;i++){
+       content[i].style.display="none"
+       buttons[i].classList.remove('active01')
+     }
+     content[0].style.display="block"
+     this.classList.add('active01')
+
+  })
+  button2.addEventListener('click',function(){
+     for(var i=0;i<content.length;i++){
+       content[i].style.display="none"
+       buttons[i].classList.remove('active01')
+     }
+     content[1].style.display="block"
+     this.classList.add('active01')
+
+  })
+  button3.addEventListener('click',function(){
+     for(var i=0;i<content.length;i++){
+       content[i].style.display="none"
+       buttons[i].classList.remove('active01')
+     }
+     content[2].style.display="block"
+     this.classList.add('active01')
+
+  })
+ //date
+ var costemDate=document.getElementsByClassName('costem-date')[0]
+  var costemDate1=document.getElementsByClassName('costem-date1')[0]
+  var realDate=document.getElementById('real-date')
+  var realDate1=document.getElementById('real-date1')
+  var date=document.getElementsByClassName('date0')[0]
+  var date1=document.getElementsByClassName('date01')[0]
+
+  var date1=document.getElementsByClassName('date01')
+  var d= new Date()
+  var year= d.getFullYear()
+  var mounth=d.getMonth()+1
+  var day=d.getDate()
+  realDate1.innerHTML=year+"-"+ mounth +"-"+day
+  costemDate.addEventListener('click',function(){
+    date.addEventListener('change',function(){
+    realDate.innerHTML=date.value;
+    })
+  })
+    costemDate1.addEventListener('click',function(){
+   date1[0].addEventListener('change',function(){
+    realDate1.innerHTML=date1[0].value;
+    
+   })
+
+   
+    
+    
+  })
+  
+</script>
+ 
+
+</body>
+</html>

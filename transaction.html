@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DIMS NEM Construction</title>
+    
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+     <link rel="stylesheet" href="assets/css/trnasaction.css">
+    <script src="https://use.fontawesome.com/7cdbaf2a11.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/image/Favicon.jpg">
+
+    
+</head>
+<body>
+  <div class="row" style="margin-bottom: 30px;">
+      <div class="col-md-2">
+          <div class="logo">
+              <img src="assets/image/logo.png" alt="">
+          </div>
+          <div class="sidenav">
+                <div class="box">
+                    <a  href="home.html"><img src="assets/image/Home-icon.png" width=30px height="30px" style="margin-right:10px;" alt=""></i>Home</a>
+                    <a href="project.html"><img src="assets/image/project.png" width="25px" height="25px;" style="margin-right: 10px;">Projects</a>
+                    <a  href="user.html"><img src="assets/image/user.jpg" width="30px" height="30px;" style="margin-right:10px;" alt="">User Master </a> 
+                           <a href="resourses.html"><img src="assets/image/resourses.png" width=25px height="25px" style="margin-right:5px;" alt="">Resourses </a>
+                           <a href="supplier.html"><img src="assets/image/supplier.png" width=25px height="25px" style="margin-right:5px;" alt="">Supplier</a>
+                           
+                           
+                               <a  href="vehicle.html"><img src="assets/image/vehicle.jpg" width="30px" height="30px;" style="margin-right: 5px;">Vehicle</a>
+                               <a  href="Employee.html"><img src="assets/image/employee.png" width="20px" height="25px"; style="margin-right: 5px;">
+                                 Employee</a>
+                                 <a  href="transaction.html"><img src="assets/image/transaction.png" width="30px" height="30px"; style="margin-right: 5px;">
+                                   Transaction</a>    
+                 <a   href="Qrgenarator.html"> <img src="assets/image/qrimage.png" alt="" width="20px" height="25px"; style="margin-right: 5px;"> QR configaration</a>
+                 <a href="report.html"><img src="assets/image/report.jpg" width="25px" height="25px;" style="margin-right: 10px;">Report</a>
+                  </div> 
+                </div>
+          </div>
+     
+      <div class="col-md-10">
+          <header>
+              <div class="col-md-8">
+                  
+              </div>
+              <div class="col-md-4">
+                 <div class="loging">
+                   <button id="logingButton"><i class="fa fa-power-off"></i></a></button>
+                   <span>Logout</span>
+                 </div>
+                
+                </div>
+          </header>
+          <div class="tiles">
+            <div class="tile" >
+                <span class="header" style="text-align: center;">tank</span>
+              <img src="assets/image/tank.png"/>
+              <div class="details">
+                <span class="title">
+                  <button class="button"><i style="margin-right:10px;" class="fa fa-check-circle"></i> <a href="T-tank.html">CHECK</a></button>
+                </span>
+              </div>
+            </div>
+            <div class="tile" href="#">
+                <span class="header" style="text-align: center;">browser</span>
+                <img src="assets/image/bowser.png"/>
+                <div class="details">
+                  <span class="title">
+                    <button class="button"><i style="margin-right:10px;" class="fa fa-check-circle"></i><a href="T-Bowser.html">CHECK</a></button>
+                  </span>-
+                </div>
+              </div>
+              <div class="tile" href="#">
+                  <span class="header" style="text-align: center;">Barrel</span>
+                  <img src="assets/image/barrel.png"/>
+                  <div class="details">
+                    <span class="title">
+                      <button class="button"><i style="margin-right:10px;" class="fa fa-check-circle"></i><a href="T-Barrel.html">CHECK</a></button>
+                    </span>
+                  </div>
+                </div>
+                </div>
+                <div class="tiles">
+                    
+                    <div class="tile" href="#">
+                        <span class="header" style="text-align: center;">Other</span>
+                      <img src="assets/image/organization.png"/>
+                      <div class="details">
+                        <span class="title">
+                          <button class="button"><i style="margin-right:10px;" class="fa fa-check-circle"></i><a href="torganization.html">CHECK</a></button>
+                        </span>
+                      </div>
+                    </div>
+                      <div class="tile" href="#">
+                          <span class="header" style="text-align: center;">Supplier</span>
+                          <img src="assets/image/supplier.png"/>
+                          <div class="details">
+                            <span class="title">
+                              <button class="button"><i style="margin-right:10px;" class="fa fa-check-circle"></i><a href="t-supllier.html">CHECK</a></button>
+                            </span>
+                          </div>
+                        </div>
+                        </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div style="height:24px; background:#337ab7; color:#fff;">
+  <style>
+  .footer-left span{
+  margin-right: 30px;
+  }
+  </style>
+  <div class="footer-left">
+    <span>NEM Constructions (Pvt) Ltd</span>
+    <span>Rumesh Amarasinghe</span>
+    <span>  08/09/20</span>
+    <span style="margin-left:100px;">Powered by NEM-ERP Engineering & Research Unit</span>
+  </div>
+  
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#logingButton').click(function(){
+      $('.logoutbox').toggle()
+    })
+
+
+  var loc =window.location.pathname;
+  loc=loc.replace('/','')
+  console.log(loc)
+
+   $('.sidenav .box').find('a').each(function() {
+    $(this).toggleClass('active', $(this).attr('href') == loc);
+  });
+    
+    
+})
+</script>
+ 
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+h1{
+    color:rgb(35, 14, 223);
+    font-size:20px;
+}
+
+select{
+    border:none;
+    border-bottom: 1px solid #000;
+    width: 200px;
+    outline: none;
+    padding: 10px;
+}
+option{
+    border: none;
+}
+table{
+    margin:20px;
+    
+}
+table thead tr{
+    background-color: #fff;
+}

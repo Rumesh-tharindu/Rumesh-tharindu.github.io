@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DIMS NEM Construction</title>
+    
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dropdown.css">
+    <link rel="stylesheet" href="assets/css/T-tank.css">
+    <script src="https://use.fontawesome.com/7cdbaf2a11.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/image/Favicon.jpg">
+
+    <style>
+      .nav-btn{
+
+        display:flex;
+        align-items: center;
+      }
+      .nav-btn a{
+        margin-right: 40px;
+        margin-top: 20px;
+        color:#000;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+  <div class="row">
+      <div class="col-md-2">
+          <div class="logo">
+              <img src="assets/image/logo.png" alt="">
+          </div>
+          <div class="sidenav">
+                <div class="box">
+                  <a  href="home.html"><img src="assets/image/Home-icon.png" width=30px height="30px" style="margin-right:10px;" alt=""></i>Home</a>
+                  <a href="project.html"><img src="assets/image/project.png" width="25px" height="25px;" style="margin-right: 10px;">Projects</a>
+                  <a  href="user.html"><img src="assets/image/user.jpg" width="30px" height="30px;" style="margin-right:10px;" alt="">User Master </a> 
+                         <a href="resourses.html"><img src="assets/image/resourses.png" width=25px height="25px" style="margin-right:5px;" alt="">Resourses </a>
+                         <a href="supplier.html"><img src="assets/image/supplier.png" width=25px height="25px" style="margin-right:5px;" alt="">Supplier</a>
+                         
+                         
+                             <a  href="vehicle.html"><img src="assets/image/vehicle.jpg" width="30px" height="30px;" style="margin-right: 5px;">Vehicle</a>
+                             <a  href="user.html"><img src="assets/image/employee.png" width="20px" height="25px"; style="margin-right: 5px;">
+                               Employee</a>
+                               <a  href="transaction.html"><img src="assets/image/transaction.png" width="30px" height="30px"; style="margin-right: 5px;">
+                                 Transaction</a>    
+               <a   href="#contact"> <img src="assets/image/qrimage.png" alt="" width="20px" height="25px"; style="margin-right: 5px;"> QR configaration</a>
+             
+               <a href="report.html"><img src="assets/image/report.jpg" width="25px" height="25px;" style="margin-right: 10px;">Report</a>
+                   
+                  </div> 
+                </div>
+          </div>
+     
+      <div class="col-md-10">
+          <header>
+              <div class="col-md-8 nav-btn">
+                <a href="T-tank.html"><img width="30px" height="30px"src="/assets/image/data.jpg" alt=""></br><span  style="border-bottom: 3px solid blue;">Data</span></a>
+               
+              </div>
+              <div class="col-md-4">
+                 <div class="loging">
+                   <button id="logingButton"><i class="fa fa-power-off"></i></a></button>
+                   <span>Logout</span>
+                 </div>
+                
+                </div>
+          </header>
+         <h1 style=" text-transform: uppercase;">Transaction >Bowser</h1>
+         
+         
+         <table class="table table-bordered" >
+            <div class="row">
+                <div class="col-md-8" style="display: flex; margin-top: 25px; margin-left:-60px;">
+                   <div class="container2">
+                       <div class="dropdown2">
+                           <div class="select">
+                               <span id="show-date2">Project code</span>
+                               <i class="fa fa-chevron-down"></i>
+                           </div>
+                           <ul class="dropdown2-menu">
+                               <li>CEP-2/PK-C</li>
+                               <li>WEMEDILLA</li>
+                               <li>BEL-GEN</li>
+                               <li>IROAD_BA_1</li>
+                               <li>BOP-GEN</li>
+                               <li>MAH-GEN</li>
+                               <li>WS-SPR-EKA</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="container3">
+                       <div class="dropdown3">
+                           <div class="select">
+                               <span id="show-date3">Bowser No</span>
+                               <i class="fa fa-chevron-down"></i>
+                           </div>
+                           <ul class="dropdown3-menu">
+                               <li>1</li>
+                               <li>2</li>
+                               <li>3</li>
+                               
+                           </ul>
+                       </div>
+                   </div>
+                </div>
+                <div class="col-md-4">
+                       <p style="color:gray;margin-left:90px;">28 Nov – 9 Dec 2019</p>
+                       <div class="container1">
+                         <div class="dropdown1">
+                             <div class="select">
+                                 <span id="show-date">Last 28 days</span>
+                                 <i class="fa fa-chevron-down"></i>
+                             </div>
+                             <ul class="dropdown1-menu">
+                                 <li>Last 7 days</li>
+                                 <li>Last 28 days</li>
+                                 <li>Last 90 days</li>
+                                 <li style="border-bottom: 1px solid #e2e2e2;">Last 365 days</li>
+                                 <li>2019</li>
+                                 <li>2018</li>
+                                 <li style="border-bottom: 1px solid #e2e2e2;">2017</li>
+                                 <li>December</li>
+                                 <li>Octomber</li>
+                                 <li style="border-bottom: 1px solid #e2e2e2;">November</li>
+                                 <li><label for="date"> Costem</label><input type="date" id="date" style="visibility: hidden;"></li>
+                             </ul>
+                         </div>
+                     </div>
+                </div>
+            </div>
+            <div style="width:25%;padding:10px; margin-left:840px; margin-bottom:5px;">
+              <input type="text" class="form-control">
+            </div>
+              <style>
+                .table{
+                  margin:0;
+                }
+              </style>
+                <thead>
+                  <tr>
+                    <th >Date</th>
+                    <th>Time</th>
+                    <th >Resources Type</th>
+                    <th >No</th>
+                    <th >Type</th>
+                    <th >Received Quentity</th>
+                    <th >Issue Quentity</th>
+                    <th >Balance</th>
+                    
+                    
+                    <th>Issued To</th>
+                    <th>Issued By</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background-color:#eee; color:#000; font-weight: bold;">
+                    <td>2019/12/7</td>
+                    <td>2:35:20</td>
+                    <td>tank</td>
+                    <td>01</td>
+                    <td>Internal</td>
+                    <td>5600</td>
+                    <td></td>
+                    <td>7800</td>
+                    <td>Sarath Nandasiri</td>
+                    <td>Kumara Thirimadu</td>
+                  </tr>
+                  <tr>
+                        <td>2019/12/7</td>
+                        <td>2:45:44</td>
+                        <td>Vehicle</td>
+                        <td>HG6789</td>
+                        <td>External</td>
+                        <td>-</td>
+                        <td>70</td>
+                        <td>7730</td>
+                        <td>Sarath Nandasiri</td>
+                        <td>Nimal Perera</td>
+                      </tr>
+                  <tr>
+                        <td>2019/12/7</td>
+                        <td>5:55:40</td>
+                        <td>Machine</td>
+                        <td>PG5884</td>
+                        <td>Internal</td>
+                        <td>-</td>
+                        <td>200</td>
+                        <td>7530</td>
+                        <td>Sarath Nandasiri</td>
+                        <td>Kamal Adddarchchi</td>
+                      </tr>
+                      <tr>
+                          <td>2019/12/7</td>
+                          <td>4:20:12</td>
+                          <td>vehicle</td>
+                          <td>59-8542</td>
+                          <td>External</td>
+                          <td>-</td>
+                          <td>120</td>
+                          <td>7410</td>
+                          <td>Sarath Nandasiri</td>
+                          <td>Hemal Gunasinghe</td>
+                        </tr>
+                        <tr>
+                            <td>2019/12/7</td>
+                            <td>5:33:00</td>
+                            <td>Machine</td>
+                            <td>FMA6788</td>
+                            <td>Internal</td>
+                            <td>-</td>
+                            <td>420</td>
+                            <td>6990</td>
+                            <td>Sunil Edirisinghe</td>
+                            <td>Nihal Menidis</td>
+                          </tr>
+                          <tr>
+                              <td>2019/12/7</td>
+                              <td>6:55:40</td>
+                              <td>Vehicle</td>
+                              <td>LK 9015</td>
+                              <td>Internal</td>
+                              <td>-</td>
+                              <td>200</td>
+                              <td>6790</td>
+                              <td>Sarath Nandasiri</td>
+                              <td>Sujiwa Serasinghe</td>
+                            </tr>
+                            <tr>
+                                <td>2019/12/8</td>
+                                <td>8:50:40</td>
+                                <td>Machine</td>
+                                <td>PG5884</td>
+                                <td>Internal</td>
+                                <td>-</td>
+                                <td>200</td>
+                                <td>6590</td>
+                                <td>Kumara Sangakkara</td>
+                                <td>Mahela Jayawradana</td>
+                              </tr>
+                              <tr>
+                                  <td>2019/12/8</td>
+                                  <td>9:14:56</td>
+                                  <td>Vehicle</td>
+                                  <td>LMN 9010</td>
+                                  <td>Internal</td>
+                                  <td>-</td>
+                                  <td>50</td>
+                                  <td>6540</td>
+                                  <td>Kumara Sangakkara</td>
+                                  <td>Nihal Mendis</td>
+                                </tr>
+                                <tr>
+                                    <td>2019/12/8</td>
+                                    <td>10:11:12</td>
+                                    <td>Machin2</td>
+                                    <td>L1 2233</td>
+                                    <td>Internal</td>
+                                    <td>-</td>
+                                    <td>150</td>
+                                    <td>6390</td>
+                                    <td>Sarath Nandasiri</td>
+                                    <td>Kamal Adddarchchi</td>
+                                  </tr>
+                      
+                 
+                </tbody>
+              </table>
+              <div class="col-md-9"></div>
+              <div class="col-md-3">
+                    <nav aria-label="Page navigation example" style="margin-left: 20px;;">
+                            <ul class="pagination">
+                              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                          </nav>
+              </div>
+             
+      </div>
+  </div>
+  
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#logingButton').click(function(){
+      $('.logoutbox').toggle()
+    })
+
+
+  var loc =window.location.pathname;
+  loc=loc.replace('/','')
+  console.log(loc)
+
+   $('.sidenav .box').find('a').each(function() {
+    $(this).toggleClass('active', $(this).attr('href') == loc);
+  });
+   $('.dropdown1').on('click',function(){
+     $('.dropdown1').attr('tabindex',1).focus();
+     $(this).toggleClass('active')
+     $('.dropdown1 .dropdown1-menu').slideToggle(500)
+   })
+   $('.dropdown1-menu li').click(function(){
+    $('#show-date').html($(this).html())
+   })
+   $('.dropdown1').focusout(function(){
+     $('.dropdown1 .dropdown1-menu').slideUp(500)
+   })
+   $('.dropdown2').on('click',function(){
+     $('.dropdown2').attr('tabindex',2).focus();
+     $(this).toggleClass('active')
+     $('.dropdown2 .dropdown2-menu').slideToggle(500)
+   })
+   $('.dropdown2-menu li').click(function(){
+    $('#show-date2').html($(this).html())
+   })
+   $('.dropdown3').focusout(function(){
+     $('.dropdown2 .dropdown2-menu').slideUp(500)
+   })
+   $('.dropdown3').on('click',function(){
+     $('.dropdown3').attr('tabindex',3).focus();
+     $(this).toggleClass('active')
+     $('.dropdown3 .dropdown3-menu').slideToggle(500)
+   })
+   $('.dropdown3-menu li').click(function(){
+    $('#show-date3').html($(this).html())
+   })
+   $('.dropdown3').focusout(function(){
+     $('.dropdown3 .dropdown3-menu').slideUp(500)
+   })
+});
+    
+    
+</script>
+ 
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DIMS NEM Construction</title>
+    
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dropdown.css">
+    <link rel="stylesheet" href="assets/css/T-tank.css">
+    <script src="https://use.fontawesome.com/7cdbaf2a11.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/image/Favicon.jpg">
+
+    <style>
+      .nav-btn{
+
+        display:flex;
+        align-items: center;
+      }
+      .nav-btn a{
+        margin-right: 40px;
+        margin-top: 20px;
+        color:#000;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+  <div class="row">
+      <div class="col-md-2">
+          <div class="logo">
+              <img src="assets/image/logo.png" alt="">
+          </div>
+          <div class="sidenav">
+                <div class="box">
+                  <a  href="home.html"><img src="assets/image/Home-icon.png" width=30px height="30px" style="margin-right:10px;" alt=""></i>Home</a>
+                  <a href="project.html"><img src="assets/image/project.png" width="25px" height="25px;" style="margin-right: 10px;">Projects</a>
+                  <a  href="user.html"><img src="assets/image/user.jpg" width="30px" height="30px;" style="margin-right:10px;" alt="">User Master </a> 
+                         <a href="resourses.html"><img src="assets/image/resourses.png" width=25px height="25px" style="margin-right:5px;" alt="">Resourses </a>
+                         <a href="supplier.html"><img src="assets/image/supplier.png" width=25px height="25px" style="margin-right:5px;" alt="">Supplier</a>
+                         
+                         
+                             <a  href="vehicle.html"><img src="assets/image/vehicle.jpg" width="30px" height="30px;" style="margin-right: 5px;">Vehicle</a>
+                             <a  href="user.html"><img src="assets/image/employee.png" width="20px" height="25px"; style="margin-right: 5px;">
+                               Employee</a>
+                               <a  href="transaction.html"><img src="assets/image/transaction.png" width="30px" height="30px"; style="margin-right: 5px;">
+                                 Transaction</a>    
+               <a   href="#contact"> <img src="assets/image/qrimage.png" alt="" width="20px" height="25px"; style="margin-right: 5px;"> QR configaration</a>
+               <a href="report.html"><img src="assets/image/report.jpg" width="25px" height="25px;" style="margin-right: 10px;">Report</a>
+                   
+                  </div> 
+                </div>
+          </div>
+     
+      <div class="col-md-10">
+          <header>
+             
+              <div class="col-md-4" style="margin-left: 770px;">
+                 <div class="loging">
+                   <button id="logingButton"><i class="fa fa-power-off"></i></a></button>
+                   <span>Logout</span>
+                 </div>
+                
+                </div>
+          </header>
+         <h1 style=" text-transform: uppercase;">Transaction->Oragization</h1>
+         
+         
+         <table class="table table-bordered" >
+           
+                <thead>
+                  <tr>
+                    <th >Date</th>
+                    <th>Time</th>
+                    <th >Resourses Type</th>
+                    <th >No</th>
+                    <th>Project_code</th>
+                    <th >Received Quentity</th>
+                     <th>Oragnization Name</th>
+                  
+                    
+                    <th>Issued To</th>
+                    <th>Issued By</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background-color:#eee; color:#000; font-weight: bold;">
+                    <td>2019/12/7</td>
+                    <td>2:35:20</td>
+                    <td>tank</td>
+                    <td>01</td>
+                    <td>CPA_2</td>
+                    <td>500</td>
+                    <td>Colombo Police</td>
+                    <td>Sarath Nandasiri</td>
+                    <td>Kumara Thirimadu</td>
+                  </tr>
+                  <tr >
+                    <td>2019/12/7</td>
+                    <td>2:35:20</td>
+                    <td>tank</td>
+                    <td>02</td>
+                    <td>ACD_2</td>
+                   
+                    <td>500</td>
+                    <td>kurnugela hospital</td>
+                    <td>Sarath Nandasiri</td>
+                    <td>Kumara Thirimadu</td>
+                  </tr>
+                  
+                 
+                </tbody>
+              </table>
+              <div class="col-md-9"></div>
+              <div class="col-md-3">
+                    <nav aria-label="Page navigation example" style="margin-left: 20px;;">
+                            <ul class="pagination">
+                              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                          </nav>
+              </div>
+             
+      </div>
+  </div>
+  
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#logingButton').click(function(){
+      $('.logoutbox').toggle()
+    })
+
+
+  var loc =window.location.pathname;
+  loc=loc.replace('/','')
+  console.log(loc)
+
+   $('.sidenav .box').find('a').each(function() {
+    $(this).toggleClass('active', $(this).attr('href') == loc);
+  });
+   $('.dropdown1').on('click',function(){
+     $('.dropdown1').attr('tabindex',1).focus();
+     $(this).toggleClass('active')
+     $('.dropdown1 .dropdown1-menu').slideToggle(500)
+   })
+   $('.dropdown1-menu li').click(function(){
+    $('#show-date').html($(this).html())
+   })
+   $('.dropdown1').focusout(function(){
+     $('.dropdown1 .dropdown1-menu').slideUp(500)
+   })
+   $('.dropdown2').on('click',function(){
+     $('.dropdown2').attr('tabindex',2).focus();
+     $(this).toggleClass('active')
+     $('.dropdown2 .dropdown2-menu').slideToggle(500)
+   })
+   $('.dropdown2-menu li').click(function(){
+    $('#show-date2').html($(this).html())
+   })
+   $('.dropdown3').focusout(function(){
+     $('.dropdown2 .dropdown2-menu').slideUp(500)
+   })
+   $('.dropdown3').on('click',function(){
+     $('.dropdown3').attr('tabindex',3).focus();
+     $(this).toggleClass('active')
+     $('.dropdown3 .dropdown3-menu').slideToggle(500)
+   })
+   $('.dropdown3-menu li').click(function(){
+    $('#show-date3').html($(this).html())
+   })
+   $('.dropdown3').focusout(function(){
+     $('.dropdown3 .dropdown3-menu').slideUp(500)
+   })
+});
+    
+    
+</script>
+ 
+
+</body>
+</html>

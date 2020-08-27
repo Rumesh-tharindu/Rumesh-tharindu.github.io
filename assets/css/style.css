@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding:0;
+}
+
+body{
+    
+    padding: 0;
+    box-sizing: border-box;
+    margin:0;
+    
+}
+.row{
+  margin-right: 0;
+  margin-left:0;
+  margin-bottom: 23px;
+}
+.col-md-2{
+  padding:0;
+}
+.col-md-10{
+  padding: 0;
+}
+.col-md-2 .logo{
+    width:100%;
+    height:150px;
+    border-right:1px solid rgb(228, 222, 222);
+   
+    
+}
+.col-md-2 .logo img{
+    width:100%;
+    height:150px;
+}
+/* Fixed sidenav, full height */
+.sidenav {
+    
+    height: 100%;
+    width: 100%;
+   
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top:px;
+    border-right: 1px solid rgb(228, 222, 222);
+   
+  }
+
+  .sidenav .box{
+    width:100%;
+    height:100% ;
+   
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    margin-top: 6px;
+  }
+  .pagination{
+    margin: 0;
+  }
+  
+  
+  /* On mouse-over */
+  .dropdown-btn:hover {
+    background-color:#555;
+    color:#fff;
+  }
+
+  .sidenav a:hover{
+    background-color: #555;
+    color:#fff;
+  }
+  
+  /* Main content */
+  
+  
+  /* Add an active class to the active dropdown button */
+  .box .active {
+    background-color: #555;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color:#fafafa;
+    
+  }
+ 
+.col-md-10 header{
+   width: 100%;
+   height:70px;
+   border-bottom:2px solid rgb(228, 222, 222);
+}
+.col-md-10 header .col-md-4 .loging{
+  
+  margin-top: 20px;
+  margin-left: 160px;
+}
+.col-md-10 header .col-md-4 .loging button{
+  background-color: black;
+  color:#fff;
+  padding: 10px 15px;
+  border:none;
+  border-radius: 50%;
+  margin-right: 10px;
+  outline: none;
+}
+.col-md-10 header .col-md-4 .loging span{
+  font-weight: bold;
+  font-size: 20px;
+}
+.col-md-10  .col-md-4 .logoutbox::before{
+  content: '';
+  width:20px;
+  height:20px ;
+  background-color: #fff;
+  transform: rotate(45deg);
+  position: relative;
+  top:-18px;
+  left:40px;
+  border:1px solid #eee;
+  border-right:none;
+  border-bottom:none;
+  z-index: 9;
+  
+}
+.col-md-10  .col-md-4 .logoutbox{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #fff;
+  width:160px;
+  height:100px ;
+  left:120px;
+  top:12px;
+ 
+  padding: 10px;
+  z-index: 10;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10), 0 3px 10px 0 rgba(0, 0, 0, 0.10);
+ 
+  
+}
+.col-md-10  .col-md-4 .logoutbox a{
+  
+color:#000;
+margin-top: 10px;
+font-size: 15px;
+
+text-decoration: none;
+
+}
+.col-md-10  .col-md-4 .logoutbox a:hover{
+  background-color: #eee;
+  font-weight: bold;
+}
+.wrapper{
+  border:1px solid #ccc;
+}
+.wrapper h4{
+  
+  color:#555;
+}

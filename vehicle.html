@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DIMS NEM Construction</title>
+    
+    <link rel="stylesheet" href="assets/datatables/css/jquery.dataTables.min.css">
+    
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <script src="https://use.fontawesome.com/7cdbaf2a11.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/image/Favicon.jpg">
+    <link rel="stylesheet" href="assets/css/vehicle.css">
+
+    
+</head>
+<body>
+  <div class="row" style="margin-bottom: 30px;">
+      <div class="col-md-2">
+          <div class="logo">
+              <img src="assets/image/logo.png" alt="">
+          </div>
+          <div class="sidenav">
+                <div class="box">
+                        
+                    <a  href="home.html"><img src="assets/image/Home-icon.png" width=30px height="30px" style="margin-right:10px;" alt=""></i>Home</a>
+                    <a href="project.html"><img src="assets/image/project.png" width="25px" height="25px;" style="margin-right: 10px;">Projects</a>
+                    <a  href="user.html"><img src="assets/image/user.jpg" width="30px" height="30px;" style="margin-right:10px;" alt="">User Master </a> 
+                           <a href="resourses.html"><img src="assets/image/resourses.png" width=25px height="25px" style="margin-right:5px;" alt="">Resources </a>
+                           <a href="supplier.html"><img src="assets/image/supplier.png" width=25px height="25px" style="margin-right:5px;" alt="">Supplier</a>
+                           
+                           
+                               <a  href="vehicle.html"><img src="assets/image/vehicle.jpg" width="30px" height="30px;" style="margin-right: 5px;">Vehicle</a>
+                               <a  href="Employee.html"><img src="assets/image/employee.png" width="20px" height="25px"; style="margin-right: 5px;">
+                                 Employee</a>
+                                 <a  href="transaction.html"><img src="assets/image/transaction.png" width="30px" height="30px"; style="margin-right: 5px;">
+                                   Transaction</a>    
+                 <a   href=""> <img src="assets/image/qrimage.png" alt="" width="20px" height="25px"; style="margin-right: 5px;"> QR configaration</a>
+                 <a href="report.html"><img src="assets/image/report.jpg" width="25px" height="25px;" style="margin-right: 10px;">Report</a>
+                  </div> 
+                </div>
+          </div>
+     
+      <div class="col-md-10">
+          <header>
+              <div class="col-md-8">
+                <div class="nav-item">
+                    
+                  <button data-toggle="modal" data-target="#exampleModal"><img src="assets/image/AddNew.png" alt="" ><br>New</button>
+              
+                
+                  <button data-toggle="modal" data-target="#exampleModalEdit"><img src="assets/image/Delete.jpg" alt="" ><br>Edit</button>
+               
+                
+                  <button data-toggle="modal" data-target="#exampleModalView"><img src="assets/image/View.png" alt="" ><br>View</button>
+               
+               
+                  <button id="delete"><img src="assets/image/delete.png" alt="" ><br>Delete</button>
+                  <a href="">
+                      <button><img src="assets/image/excel.png" width="60px" height="35px" alt="" ><br>Import</button>
+                    </a>
+                
+                <a href="">
+                  <button><img src="assets/image/refresh.png" width="40px" height="40px" alt="" ><br>Refresh</button>
+                </a>
+              </a>
+
+              </div>
+          
+              </div>
+              <div class="col-md-4">
+                 <div class="loging">
+                   <button id="logingButton"><i class="fa fa-power-off"></i></a></button>
+                   <span>Logout</span>
+                 </div>
+                
+                </div>
+          </header>
+          <div class="data">
+              <h3 style="font-weight: bold;color:blue;margin-left: 10px; margin-bottom:40px ;">Vehicle List</h3>  
+          <table id="table1" class="table table-striped table-bordered" cellspacing="0" >
+                       
+            <thead>
+                <tr>
+                    
+                    <th width='20px;'>Vehicle_no</th>
+                    <th width='px;'>Name</th>
+                    <th width='30px;'>Resources_Group_No</th>
+                    <th width='60px;'>Type</th>
+                    <th width='70px;'>Resources_Type</th>
+                    <th width='50px;'>Standard_consumption</th>
+                    <th width='60px;'>Vehicle_status</th>
+                    <th width='60px;'>UOM</th>
+
+                    
+                   
+                    
+                </tr>
+            </thead>
+            <tbody>
+               
+                 
+                <tr>
+                    <td>42-7586</td>
+                    <td>Crew-cab-Izusu</td>
+                    <td>Crew Cab</td>
+                    <td>Internal</td>
+                    <td>Vehicle</td>
+                    <td>9.0</td>
+                    <td>Meter Working</td>
+                    <td>Km</td>
+                  </tr>
+                  <tr>
+                      <td>LC-6565</td>
+                      <td>Truck water Bowser</td>
+                      <td>Water Bowser</td>
+                      <td>Internal</td>
+                      <td>Vehicle</td>
+                      <td>No</td>
+                      <td>Not working</td>
+                      <td>Km</td>
+                    </tr>
+                    <tr>
+                        <td>259-14</td>
+                        <td>Van</td>
+                        <td>Van</td>
+                        <td>External</td>
+                        <td>Vehicle</td>
+                        <td>7.9</td>
+                        <td>Meter Working</td>
+                        <td>Km</td>
+                      </tr>
+                      <tr>
+                          <td>LH-7686</td>
+                          <td>Tipper-TATA-6w</td>
+                          <td>Drum-Truck-6W</td>
+                          <td>Internal</td>
+                          <td>Vehicle</td>
+                          <td>4.0</td>
+                          <td>Meter Working</td>
+                          <td>Km</td>
+                        </tr>
+                        <tr>
+                            <td>FAQAC0018</td>
+                            <td>Air-Compressor-airman</td>
+                            <td>Air-Compressor</td>
+                            <td>Internal</td>
+                            <td>Machine</td>
+                            <td>No</td>
+                            <td>Not Workig</td>
+                            <td>Hr</td>
+                          </tr>
+                          <tr>
+                              <td>RD-6535</td>
+                              <td>Tractor-Tafe-45D1</td>
+                              <td>Tractor</td>
+                              <td>Internal</td>
+                              <td>Machine</td>
+                              <td>No</td>
+                              <td>Not Working</td>
+                              <td>Hr</td>
+                            </tr>
+                  
+              </tbody>
+          
+            </table>
+          
+              </div>    
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: #337ab7;">
+                  <h5 class="modal-title" id="exampleModalLabel"  style="color:#fff;font-weight: bold;">+ Add New Vehicle</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" style="color:#fff;font-weight: bold;">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:105px ;">Vehicle_No</label>
+                    <input type="text" class="form-control" width="30px;" placeholder="Enter Vehicle No">
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:140px ;">Name:</label>
+                    <input type="text" class="form-control" width="30px;" placeholder="Enter Name!">
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:30px ;">Resources_Group_No</label>
+                    <select class="selectpicker">
+                      
+                      <option value="">Jeep</option>
+                      <option value="">Light Lorry</option>
+                      <option value="">Crew Cab</option>
+                      <option value="">Doom Truck</option>
+                      <option value="">Water Bowser</option>
+                      <option value="">Double cab</option>
+                      <option value="">Drum-Truck-6W</option>
+                      <option value="">Boom truck</option>
+                      
+                    </select>
+                    
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:150px ;">Type</label>
+                    <select class="selectpicker">
+                      <option value="">Vehicle</option>
+                      <option value="">Machine</option>
+                      
+                    </select>
+                    
+                  </div>
+                  <div class="form-group" style="display: flex; width:650px; ">
+                    <label for="" style="margin-right:70px ;">Resources_Type</label>
+                    <select class="selectpicker">
+                      <option value="">Internal</option>
+                      <option value="">External</option>
+                      
+                    </select>
+                    
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:20px ;">Standard_consumption</label>
+                    <input type="password" class="form-control" width="20px;" placeholder="">
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    
+                    <input type="file" width="20px;" placeholder="" id="uplaod">
+                    <label for="uplaod" style="margin-right:20px ;">Upload_Image</label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add vehicle</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         <!--edit-->
+         <div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header" style="background-color: #337ab7;">
+                <h5 class="modal-title" id="exampleModalLabel"  style="color:#fff;font-weight: bold;">+ Edit Vehicle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" style="color:#fff;font-weight: bold;">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group" style="display: flex; width:450px; ">
+                  <label for="" style="margin-right:105px ;">Vehicle_No</label>
+                  <input type="text" class="form-control" width="30px;" placeholder="Enter Vehicle No">
+                </div>
+                <div class="form-group" style="display: flex; width:450px; ">
+                  <label for="" style="margin-right:140px ;">Name:</label>
+                  <input type="text" class="form-control" width="30px;" placeholder="Enter Name!">
+                </div>
+                <div class="form-group" style="display: flex; width:450px; ">
+                  <label for="" style="margin-right:30px ;">Resources_Group_No</label>
+                  <select class="selectpicker">
+                    
+                    <option value="">Jeep</option>
+                    <option value="">Light Lorry</option>
+                    <option value="">Crew Cab</option>
+                    <option value="">Doom Truck</option>
+                    <option value="">Water Bowser</option>
+                    <option value="">Double cab</option>
+                    <option value="">Drum-Truck-6W</option>
+                    <option value="">Boom truck</option>
+                    
+                  </select>
+                  
+                </div>
+                <div class="form-group" style="display: flex; width:450px; ">
+                  <label for="" style="margin-right:150px ;">Type</label>
+                  <select class="selectpicker">
+                    <option value="">Vehicle</option>
+                    <option value="">Machine</option>
+                    
+                  </select>
+                  
+                </div>
+                <div class="form-group" style="display: flex; width:650px; ">
+                  <label for="" style="margin-right:70px ;">Resources_Type</label>
+                  <select class="selectpicker">
+                    <option value="">Internal</option>
+                    <option value="">External</option>
+                    
+                  </select>
+                  
+                </div>
+                <div class="form-group" style="display: flex; width:450px; ">
+                  <label for="" style="margin-right:20px ;">Standard_consumption</label>
+                  <input type="password" class="form-control" width="20px;" placeholder="">
+                </div>
+                <div class="form-group" style="display: flex; width:450px; ">
+                  
+                  <input type="file" width="20px;" placeholder="" id="uplaod">
+                  <label for="uplaod" style="margin-right:20px ;">Upload_Image</label>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add vehicle</button>
+              </div>
+            </div>
+          </div>
+       
+        
+  <!--View-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: #337ab7;">
+                  <h5 class="modal-title" id="exampleModalLabel"  style="color:#fff;font-weight: bold;">+ Add New Vehicle</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" style="color:#fff;font-weight: bold;">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:105px ;">Vehicle_No</label>
+                    <input type="text" class="form-control" width="30px;" placeholder="Enter Vehicle No">
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:140px ;">Name:</label>
+                    <input type="text" class="form-control" width="30px;" placeholder="Enter Name!">
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:30px ;">Resources_Group_No</label>
+                    <select class="selectpicker">
+                      
+                      <option value="">Jeep</option>
+                      <option value="">Light Lorry</option>
+                      <option value="">Crew Cab</option>
+                      <option value="">Doom Truck</option>
+                      <option value="">Water Bowser</option>
+                      <option value="">Double cab</option>
+                      <option value="">Drum-Truck-6W</option>
+                      <option value="">Boom truck</option>
+                      
+                    </select>
+                    
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:150px ;">Type</label>
+                    <select class="selectpicker">
+                      <option value="">Vehicle</option>
+                      <option value="">Machine</option>
+                      
+                    </select>
+                    
+                  </div>
+                  <div class="form-group" style="display: flex; width:650px; ">
+                    <label for="" style="margin-right:70px ;">Resources_Type</label>
+                    <select class="selectpicker">
+                      <option value="">Internal</option>
+                      <option value="">External</option>
+                      
+                    </select>
+                    
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:20px ;">Standard_consumption</label>
+                    <input type="password" class="form-control" width="20px;" placeholder="">
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    
+                    <input type="file" width="20px;" placeholder="" id="uplaod">
+                    <label for="uplaod" style="margin-right:20px ;">Upload_Image</label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add vehicle</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="modal fade" id="exampleModalView" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: #337ab7;">
+                  <h5 class="modal-title" id="exampleModalLabel"  style="color:#fff;font-weight: bold;">+ View Vehicle</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" style="color:#fff;font-weight: bold;">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:105px ;">Vehicle_No</label>
+                    <input type="text" class="form-control" width="30px;" placeholder="Enter Vehicle No">
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:140px ;">Name:</label>
+                    <input type="text" class="form-control" width="30px;" placeholder="Enter Name!">
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:30px ;">Resources_Group_No</label>
+                    <select class="selectpicker">
+                      
+                      <option value="">Jeep</option>
+                      <option value="">Light Lorry</option>
+                      <option value="">Crew Cab</option>
+                      <option value="">Doom Truck</option>
+                      <option value="">Water Bowser</option>
+                      <option value="">Double cab</option>
+                      <option value="">Drum-Truck-6W</option>
+                      <option value="">Boom truck</option>
+                      
+                    </select>
+                    
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:150px ;">Type</label>
+                    <select class="selectpicker">
+                      <option value="">Vehicle</option>
+                      <option value="">Machine</option>
+                      
+                    </select>
+                    
+                  </div>
+                  <div class="form-group" style="display: flex; width:650px; ">
+                    <label for="" style="margin-right:70px ;">Resources_Type</label>
+                    <select class="selectpicker">
+                      <option value="">Internal</option>
+                      <option value="">External</option>
+                      
+                    </select>
+                    
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    <label for="" style="margin-right:20px ;">Standard_consumption</label>
+                    <input type="password" class="form-control" width="20px;" placeholder="">
+                  </div>
+                  <div class="form-group" style="display: flex; width:450px; ">
+                    
+                    <input type="file" width="20px;" placeholder="" id="uplaod">
+                    <label for="uplaod" style="margin-right:20px ;">Upload_Image</label>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+          </div>
+           
+
+          </div>
+      </div>
+    
+    </div>
+    <div style="height:24px; background:#337ab7; color:#fff;">
+      <style>
+      .footer-left span{
+      margin-right: 30px;
+      }
+      </style>
+      <div class="footer-left">
+        <span>NEM Constructions (Pvt) Ltd</span>
+        <span>Rumesh Amarasinghe</span>
+        <span>  08/09/20</span>
+        <span style="margin-left:100px;">Powered by NEM-ERP Engineering & Research Unit</span>
+      </div>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/datatables/js/jquery.dataTables.min.js"></script>
+<script src="assets/datatables/js/dataTables.bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('#logingButton').click(function(){
+      $('.logoutbox').toggle()
+    })
+    table = $('#table1').DataTable({
+    })
+    $('tbody tr').click(function(ev){
+          $(ev.currentTarget).css({
+            'background-color': '#8199fe',
+            'color':'#fff'
+          }) 
+    })
+    $('#delete').on('click',function(){
+      confirm("Do you need to delete this record")
+    })
+    $('select').selectpicker();
+
+    var loc =window.location.pathname;
+  loc=loc.replace('/','')
+  console.log(loc)
+
+   $('.sidenav .box').find('a').each(function() {
+    $(this).toggleClass('active', $(this).attr('href') == loc);
+  })
+    
+})
+</script>
+ <script>  
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  var navitem=document.getElementsByClassName('nav-link')
+ 
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
+</body>
+</html>

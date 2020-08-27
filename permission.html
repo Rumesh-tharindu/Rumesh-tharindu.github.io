@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+body {
+  height: 100%;
+}
+body {
+  background: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity:0;
+}
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e2e2e2;
+}
+
+.control input:checked ~ .control__indicator {
+  background: rgb(114, 114, 246);
+}
+
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.control--checkbox .control__indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+/*!
+// CSS only Responsive Tables
+// http://dbushell.com/2016/03/04/css-only-responsive-tables/
+// by David Bushell
+*/
+.rtable {
+  /*!
+  // IE needs inline-block to position scrolling shadows otherwise use:
+  // display: block;
+  // max-width: min-content;
+  */
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.rtable,
+.rtable--flip tbody {
+  -webkit-overflow-scrolling: touch;
+  background: radial-gradient(left, ellipse, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
+  background-size: 10px 100%, 10px 100%;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+}
+
+.rtable td:first-child,
+.rtable--flip tbody tr:first-child {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, white), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: 20px 100%;
+}
+
+.rtable td:last-child,
+.rtable--flip tbody tr:last-child {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, white), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 20px 100%;
+}
+
+.rtable th {
+  font-size: 11px;
+  text-align: left;
+  text-transform: uppercase;
+  background: #f2f0e6;
+}
+
+.rtable th
+{
+  padding: 10px 20px;
+  border: 1px solid #d9d7ce;
+}
+
+.rtable td{
+  border: 1px solid #d9d7ce;
+ 
+}
+.table-inside {
+   border-collapse: collapse;
+   margin: 0;
+}
+.rtable td .table-inside td{
+  padding: 10px;
+  margin:0;
+}
+.rtable--flip {
+  display: -webkit-box;
+  display: flex;
+  overflow: hidden;
+  background: none;
+}
+
+.rtable--flip thead {
+  display: -webkit-box;
+  display: flex;
+  flex-shrink: 0;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+}
+
+.rtable--flip tbody {
+  display: -webkit-box;
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.rtable--flip tr {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+
+.rtable--flip td,
+.rtable--flip th {
+  display: block;
+}
+
+.rtable--flip td {
+  background-image: none !important;
+  border-left: 0;
+}
+
+.rtable--flip th:not(:last-child),
+.rtable--flip td:not(:last-child) {
+  border-bottom: 0;
+}
+
+/*!
+// CodePen house keeping
+*/
+body {
+  margin: 0;
+  padding: 25px;
+  color: #494b4d;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h1{
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+
+    </style>
+</head>
+<body>
+  <h1>User permisson setup</h1>
+  <table class="rtable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>user master</th>
+        <th>Resourses</th>
+        <th>Supplier</td>
+        <th>Vehicle</th>
+        <th>Employee</th>
+        <th>Permisson Setup</th>
+        <th>Mobile User</th>
+        <th>project Assign</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><table class="table-inside">
+          <tr>
+            <td>View</td>
+            <td>Add user</td>
+            <td>View user</td>
+            <td>Delete user</td>
+          </tr>
+        </table></td>
+        <td><table class="table-inside">
+          <tr>
+            <td>View</td>
+            <td>add user</td>
+            <td>view user</td>
+            <td>Delete user</td>
+          </tr>
+        </table></td>
+        <td><table class="table-inside">
+          <tr>
+            <td>View</td>
+            <td>add user</td>
+            <td>view user</td>
+            <td>Delete user</td>
+          </tr>
+        </table></td>
+        <td><table class="table-inside">
+          <tr>
+            <td>View</td>
+            <td>add user</td>
+            <td>view user</td>
+            <td>Delete user</td>
+          </tr>
+        </table></td>
+        <td><table class="table-inside">
+          <tr>
+            <td>View</td>
+            <td>add user</td>
+            <td>view user</td>
+            <td>Delete user</td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td>Pubudu Jayasinghe</td>
+        <td>ERP project manger</td>
+        <td><table class="table-inside">
+          <tr>
+            <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;padding:10px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;padding:30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;padding:10px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            
+            
+        </table></td>
+        <td><table class="table-inside">
+          
+            <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none; padding-right: 50px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+          
+        </table>
+      </td>
+        <td><table class="table-inside">
+          
+            <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            
+        </table></td>
+        <td><table class="table-inside">
+          
+            <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            
+        </table></td>
+        <td><table class="table-inside">
+          
+          <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+            <input type="checkbox" checked="checked"/>
+            <div class="control__indicator"></div>
+          </label></td>
+          <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+            <input type="checkbox" checked="checked"/>
+            <div class="control__indicator"></div>
+          </label></td>
+          <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+            <input type="checkbox" checked="checked"/>
+            <div class="control__indicator"></div>
+          </label></td>
+          <td style="border:none;"><label class="control control--checkbox">
+            <input type="checkbox" checked="checked"/>
+            <div class="control__indicator"></div>
+          </label></td> 
+      </table></td>
+
+      <td><table class="table-inside"> 
+        <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+          <input type="checkbox" checked="checked"/>
+          <div class="control__indicator"></div>
+        </label></td>
+        </td></table>
+        <td><table class="table-inside"> 
+          <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+            <input type="checkbox" checked="checked"/>
+            <div class="control__indicator"></div>
+          </label></td>
+          </td></table>
+          <td><table class="table-inside"> 
+            <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+           </table> </td>
+        </tr>
+        
+        <tr>
+          <td>R vijayadasa</td>
+          <td>DGM</td>
+          <td><table class="table-inside">
+            <tr>
+              <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;padding:10px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;padding:30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;padding:10px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              
+          </table></td>
+          <td><table class="table-inside">
+            
+              <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none; padding-right: 50px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+            
+          </table>
+        </td>
+          <td><table class="table-inside">
+            
+              <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              
+          </table></td>
+          <td><table class="table-inside">
+            
+              <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              
+          </table></td>
+          <td><table class="table-inside"> 
+            <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            <td style="border:none;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+        </table></td>
+        
+        <td><table class="table-inside"> 
+          <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+            <input type="checkbox" checked="checked"/>
+            <div class="control__indicator"></div>
+          </label></td>
+          </td></table>
+          <td><table class="table-inside"> 
+            <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            </td></table>
+            <td><table class="table-inside"> 
+              <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+             </table> </td>
+          
+          
+          </tr>
+          <tr>
+            <td>karunarathna M</td>
+            <td>GM</td>
+            <td><table class="table-inside">
+              <tr>
+                <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;padding:10px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;padding:30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;padding:10px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                
+            </table></td>
+            <td><table class="table-inside">
+              
+                <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none; padding-right: 50px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+              
+            </table>
+          </td>
+            <td><table class="table-inside">
+              
+                <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                
+            </table></td>
+            <td><table class="table-inside">
+              
+                <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                
+            </table></td>
+            <td><table class="table-inside">
+              
+              <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              <td style="border:none;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              
+          </table></td>
+          <td><table class="table-inside"> 
+            <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+              <input type="checkbox" checked="checked"/>
+              <div class="control__indicator"></div>
+            </label></td>
+            </td></table>
+            <td><table class="table-inside"> 
+              <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              </td></table>
+              <td><table class="table-inside"> 
+                <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+               </table> </td>
+            
+            
+            </tr>
+            <tr>
+              <td>Udayanga rajapaksha</td>
+              <td>Qs</td>
+              <td><table class="table-inside">
+                <tr>
+                  <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none;padding:10px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none;padding:30px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none;padding:10px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  
+              </table></td>
+              <td><table class="table-inside">
+                
+                  <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none; padding-right: 50px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                
+              </table>
+            </td>
+              <td><table class="table-inside">
+                
+                  <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  
+              </table></td>
+              <td><table class="table-inside">
+                
+                  <td style="border:none; padding-right: 30px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  <td style="border:none;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                  
+              </table></td>
+              <td><table class="table-inside">
+                
+                <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                <td style="border:none;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                
+            </table></td>
+            <td><table class="table-inside"> 
+              <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                <input type="checkbox" checked="checked"/>
+                <div class="control__indicator"></div>
+              </label></td>
+              </td></table>
+              <td><table class="table-inside"> 
+                <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                  <input type="checkbox" checked="checked"/>
+                  <div class="control__indicator"></div>
+                </label></td>
+                </td></table>
+                <td><table class="table-inside"> 
+                  <td style="border:none;padding-right: 30px;"><label class="control control--checkbox">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label></td>
+                 </table> </td>
+              </tr>
+              
+              </tr>
+                    
+      
+    </tbody>
+  </table>
+  
+        
+         
+          
+ 
+</body>
+</html>
